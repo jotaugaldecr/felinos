@@ -1,0 +1,42 @@
+---
+title: "Datos de Felinos de Costa Rica"
+author: "Jonathan Ugalde"
+date: '2022-06-09'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Preparativos
+
+```{r carga-paquetes, message=FALSE}
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(sf)
+library(DT)
+```
+
+```{r lectura-datos}
+felinos <-
+  st_read(
+    "C:/Users/gf0604-2/Documents/felinos/felinos.csv",
+    options = c(
+      "X_POSSIBLE_NAMES=decimalLongitude", # columna de longitud decimal
+      "Y_POSSIBLE_NAMES=decimalLatitude"   # columna de latitud decimal
+    ),
+    quiet = TRUE
+  )
+```
+
+
+
+# Tabla
+
+
+
+
+# Grafico 
+
